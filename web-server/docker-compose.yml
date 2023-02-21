@@ -1,0 +1,9 @@
+services: 
+  web-server:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app #Esta linea de codigo hace que cada vez que actualicemos nuestro codigo se actualice docker  
+    ports:
+      - '80:80'
